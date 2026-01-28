@@ -1,0 +1,44 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>670</x><y>330</y><w>180</w><h>50</h></coordinates><panel_attributes>Renderer
+--
+draw (RenderObj obj) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>250</y><w>100</w><h>30</h></coordinates><panel_attributes>vitaGL</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>270</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>340</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>290</y><w>210</w><h>160</h></coordinates><panel_attributes>/RenderObject/
+--
+# transform_ : Transform
+# color_ : Color
+--
+getVertexStride() : uint (3)
+getColorStride() : uint (4)
+getModelMatrix() : mat4
+-..
+/getTotalVertices() : uint/
+/getLocalVertexArray() : float[]/
+/getColorArray() : float[]/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>90</y><w>200</w><h>240</h></coordinates><panel_attributes>Transform
+--
+translation_ : vec3
+rotation_ : vec3
+scale_ : vec3
+matrix_ : mat4
+--
+scale (vec3 vector) : void
+translate (vec3 vector) : void
+setRotation (vec3 degrees) : void
+setPosition (vec3 position) : void
+setScale (vec3 scale) : void
+-..
+getPosition () : vec3
+getRotation () : vec3
+getScale () : vec3
+getMatrix () : mat4
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>380</y><w>160</w><h>100</h></coordinates><panel_attributes>Color
+--
+- r_; : unsigned char
+- g_ : unsigned char
+- b_ : unsigned char
+--
+normalize () : vec4
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>90</x><y>350</y><w>200</w><h>30</h></coordinates><panel_attributes>unsigned char is 8 bits : 0-255
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>340</y><w>150</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;90;90;90;10;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>200</y><w>120</w><h>170</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;60;10;60;150;100;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>370</x><y>520</y><w>210</w><h>50</h></coordinates><panel_attributes>Triangle
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>460</x><y>440</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Text</id><coordinates><x>860</x><y>330</y><w>130</w><h>40</h></coordinates><panel_attributes>assume all vertices are floats
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>90</x><y>60</y><w>150</w><h>30</h></coordinates><panel_attributes>handles model matrix
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>370</x><y>260</y><w>210</w><h>30</h></coordinates><panel_attributes>position is in the center of object
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element></diagram>

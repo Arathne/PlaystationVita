@@ -1,0 +1,16 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>250</x><y>380</y><w>230</w><h>70</h></coordinates><panel_attributes>_IoReadController_
+--
+isDirectory (filePath : string) : bool
+isFile (filePath: string) : bool
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>378</y><w>330</w><h>70</h></coordinates><panel_attributes>_IoWriteController_
+--
+writeTestToFile (filePath : string, content : string) :  bool
+appendTextToFile (filePath : string, content : string) : bool
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>280</y><w>230</w><h>70</h></coordinates><panel_attributes>_IoCreationController_
+--
+createFile (filePath : string) : int
+createDirectory (filePath : string) : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>280</y><w>240</w><h>70</h></coordinates><panel_attributes>_IoDestructionController_
+--
+deleteFile (filePath : string) : int
+deleteDirectory (filePath : string) : bool
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
